@@ -1,0 +1,50 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Testing / tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ML / datasets
+ml/data/raw/*
+!ml/data/raw/.gitkeep
+!ml/data/raw/README*
+datasets/*
+!datasets/.gitkeep
+!datasets/README*
+
+# Model checkpoints
+models/*
+!models/.gitkeep
+!models/README*
+
+# Logs
+*.log
+
+# Build / temporary files
+dist/
+build/
+*.zip
