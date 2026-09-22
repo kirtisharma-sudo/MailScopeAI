@@ -9,20 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0a0d16; --surface:#121728; --surface-soft:#1a2036; --surface-sunken:#0d101c;
-  --border:#252c44; --border-strong:#3a4468;
-  --text:#eef1f9; --text-secondary:#a4addc; --text-tertiary:#6a7396;
+  --bg:#f5f7f6; --surface:#ffffff; --surface-soft:#eef3f1; --surface-sunken:#e7eeeb;
+  --border:#d5dfdb; --border-strong:#b6c7c1;
+  --text:#18252b; --text-secondary:#4e6269; --text-tertiary:#718188;
 
-  --blue:#7fb0ff; --blue-deep:#4c8dff; --blue-bg:rgba(76,141,255,0.14);
-  --lavender:#c2adff; --lavender-deep:#9b6bff; --lavender-bg:rgba(155,107,255,0.14);
-  --mint:#5fe8b8; --mint-deep:#22cf94; --mint-bg:rgba(34,207,148,0.13);
-  --peach:#ffb066; --peach-deep:#ff8f33; --peach-bg:rgba(255,143,51,0.14);
-  --yellow:#ffe066; --yellow-deep:#f5c518; --yellow-bg:rgba(245,197,24,0.14);
-  --terracotta:#ff7a7a; --terracotta-deep:#ff4d5e; --terracotta-bg:rgba(255,77,94,0.16);
+  --blue:#3f75d1; --blue-deep:#2868d8; --blue-bg:rgba(40,104,216,0.11);
+  --lavender:#7655c7; --lavender-deep:#6846b8; --lavender-bg:rgba(104,70,184,0.11);
+  --mint:#0b9b70; --mint-deep:#07845f; --mint-bg:rgba(7,132,95,0.11);
+  --peach:#c45d13; --peach-deep:#ad4c0b; --peach-bg:rgba(173,76,11,0.11);
+  --yellow:#a27600; --yellow-deep:#8b6500; --yellow-bg:rgba(139,101,0,0.12);
+  --terracotta:#cc4052; --terracotta-deep:#bd3044; --terracotta-bg:rgba(189,48,68,0.11);
 
   --radius-sm:9px; --radius-md:14px; --radius-lg:18px;
-  --shadow:0 1px 2px rgba(0,0,0,0.35), 0 10px 34px rgba(0,0,0,0.4);
-  --shadow-sm:0 1px 3px rgba(0,0,0,0.4);
+  --shadow:0 1px 2px rgba(24,37,43,0.08), 0 10px 34px rgba(24,37,43,0.10);
+  --shadow-sm:0 1px 3px rgba(24,37,43,0.12);
   --font-display:'Sora',sans-serif;
 }
 *{box-sizing:border-box;}
@@ -266,12 +266,12 @@ td.score-cell{font-family:'JetBrains Mono',monospace;font-weight:700;}
 .map-fullscreen-btn{display:flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--text-secondary);background:var(--surface-soft);border:1px solid var(--border);border-radius:999px;padding:6px 12px;cursor:pointer;transition:border-color .15s ease,color .15s ease;}
 .map-fullscreen-btn:hover{border-color:var(--border-strong);color:var(--text);}
 .map-fullscreen-btn svg{width:13px;height:13px;}
-.map-canvas-wrap{position:relative;background:radial-gradient(ellipse at 30% 20%, rgba(76,141,255,0.08), transparent 60%), var(--surface-sunken, #0a0e1a);min-height:420px;}
+.map-canvas-wrap{position:relative;background:radial-gradient(ellipse at 30% 20%, rgba(40,104,216,0.08), transparent 60%), var(--surface-sunken);min-height:420px;}
 .map-canvas-wrap svg{display:block;width:100%;height:auto;}
 :fullscreen .map-card{border-radius:0;height:100vh;display:flex;flex-direction:column;}
 :fullscreen .map-canvas-wrap{flex:1;min-height:0;}
 :fullscreen .map-canvas-wrap svg{height:100%;}
-.map-legend-badge{position:absolute;bottom:14px;left:14px;display:flex;align-items:center;gap:8px;background:rgba(10,14,26,0.82);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 12px;font-size:10.8px;color:var(--text-tertiary);}
+.map-legend-badge{position:absolute;bottom:14px;left:14px;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.88);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 12px;font-size:10.8px;color:var(--text-tertiary);}
 .map-scale-badge{position:absolute;bottom:14px;left:14px;}
 .evidence-panel-card{padding:16px 18px;margin-bottom:14px;}
 .evidence-panel-title{display:flex;align-items:center;gap:8px;font-size:12.8px;font-weight:700;color:var(--text);margin-bottom:12px;}
@@ -290,7 +290,7 @@ td.score-cell{font-family:'JetBrains Mono',monospace;font-weight:700;}
 .attribution-warn svg{width:16px;height:16px;color:var(--terracotta-deep);flex-shrink:0;margin-top:1px;}
 .attribution-warn .t{font-size:11.8px;font-weight:700;color:var(--terracotta-deep);margin-bottom:3px;}
 .attribution-warn .d{font-size:11.3px;color:var(--text-secondary);line-height:1.5;}
-.trace-banner{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;background:rgba(10,14,26,0.88);border:1px solid var(--terracotta-deep);border-radius:var(--radius-sm);padding:10px 16px;max-width:calc(100% - 220px);}
+.trace-banner{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.94);border:1px solid var(--terracotta-deep);border-radius:var(--radius-sm);padding:10px 16px;max-width:calc(100% - 220px);}
 .trace-banner svg{width:16px;height:16px;color:var(--terracotta-deep);flex-shrink:0;}
 .trace-banner .t{font-size:11.5px;font-weight:700;color:var(--text);}
 .trace-banner .d{font-size:10.8px;color:var(--text-tertiary);}
@@ -342,7 +342,7 @@ td.score-cell{font-family:'JetBrains Mono',monospace;font-weight:700;}
 .inbox-shield-btn svg{width:14px;height:14px;}
 .inbox-mobile-hint{display:none;font-size:10.5px;color:var(--text-tertiary);margin-left:auto;}
 
-#snapshot-card{position:fixed;z-index:600;width:328px;max-width:calc(100vw - 24px);max-height:calc(100vh - 24px);overflow-y:auto;background:rgba(10,14,26,0.97);border:1px solid var(--border-strong);border-radius:var(--radius-md);box-shadow:0 12px 40px rgba(0,0,0,0.55),0 0 0 1px rgba(76,141,255,0.08);padding:16px 18px;opacity:0;visibility:hidden;transform:translateY(-6px) scale(0.98);transition:opacity .14s ease,transform .16s cubic-bezier(.2,.9,.3,1.2),visibility .14s;}
+#snapshot-card{position:fixed;z-index:600;width:328px;max-width:calc(100vw - 24px);max-height:calc(100vh - 24px);overflow-y:auto;background:rgba(255,255,255,0.98);border:1px solid var(--border-strong);border-radius:var(--radius-md);box-shadow:0 12px 40px rgba(24,37,43,0.18),0 0 0 1px rgba(40,104,216,0.08);padding:16px 18px;opacity:0;visibility:hidden;transform:translateY(-6px) scale(0.98);transition:opacity .14s ease,transform .16s cubic-bezier(.2,.9,.3,1.2),visibility .14s;}
 #snapshot-card.show{opacity:1;visibility:visible;transform:translateY(0) scale(1);}
 .snap-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
 .snap-title{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--text-tertiary);}
@@ -384,6 +384,33 @@ td.score-cell{font-family:'JetBrains Mono',monospace;font-weight:700;}
 .campaign-stats{display:flex;gap:16px;margin-top:14px;flex-wrap:wrap;}
 .campaign-stats .k{font-size:9.8px;text-transform:uppercase;color:var(--text-tertiary);letter-spacing:.05em;font-weight:600;}
 .campaign-stats .v{font-size:15px;font-weight:700;margin-top:2px;}
+.plan-card-link{cursor:pointer;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease;}
+.plan-card-link:hover{border-color:var(--blue-deep);box-shadow:var(--shadow),0 0 22px rgba(40,104,216,.12);transform:translateY(-2px);}
+.plan-card-link:focus-visible{outline:3px solid var(--blue);outline-offset:3px;}
+.plan-card-link .infer-list li{cursor:pointer;}
+.plan-detail-hero{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;flex-wrap:wrap;}
+.plan-detail-hero .section-sub{max-width:720px;}
+.plan-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0;}
+.plan-feature-card{min-height:150px;padding:20px;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease;}
+.plan-feature-card:hover{border-color:var(--border-strong);box-shadow:var(--shadow),0 0 18px rgba(40,104,216,.09);transform:translateY(-1px);}
+.plan-feature-icon{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:var(--blue-bg);color:var(--blue-deep);margin-bottom:12px;}
+.plan-feature-icon svg{width:18px;height:18px;}
+.plan-feature-card h3{font-family:var(--font-display);font-size:14px;font-weight:700;margin-bottom:7px;}
+.plan-feature-card p{font-size:12.2px;line-height:1.55;color:var(--text-secondary);margin:0;}
+.plan-feature-card .badge{margin-top:12px;}
+.plan-flow{display:flex;align-items:stretch;gap:0;margin-top:16px;overflow:hidden;}
+.plan-flow-step{flex:1;position:relative;padding:16px 20px;background:var(--surface-soft);border:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.04em;color:var(--text-secondary);}
+.plan-flow-step:not(:last-child){border-right:0;}
+.plan-flow-step:not(:last-child)::after{content:'→';position:absolute;right:-9px;top:50%;z-index:1;transform:translateY(-50%);width:18px;height:18px;border-radius:50%;background:var(--surface);border:1px solid var(--border-strong);color:var(--blue-deep);text-align:center;line-height:16px;font-family:inherit;}
+.plan-flow-step strong{display:block;color:var(--text);font-family:var(--font-display);font-size:12px;margin-top:5px;letter-spacing:0;}
+.plan-detail-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px;}
+.plan-detail-actions .btn-primary,.plan-detail-actions .btn-ghost{display:inline-flex;align-items:center;gap:7px;}
+@media (max-width:720px){
+  .plan-feature-grid{grid-template-columns:1fr;}
+  .plan-flow{flex-direction:column;gap:8px;overflow:visible;}
+  .plan-flow-step:not(:last-child){border-right:1px solid var(--border);}
+  .plan-flow-step:not(:last-child)::after{content:'↓';right:auto;left:50%;top:auto;bottom:-13px;transform:translateX(-50%);}
+}
 
 /* drawers */
 .drawer-overlay{position:fixed;inset:0;background:rgba(35,32,25,.32);display:none;align-items:center;justify-content:center;z-index:80;padding:20px;}
@@ -448,10 +475,10 @@ td.score-cell{font-family:'JetBrains Mono',monospace;font-weight:700;}
 body::before{
   content:'';position:fixed;inset:-12%;z-index:0;pointer-events:none;
   background:
-    radial-gradient(640px circle at 14% 18%, rgba(76,141,255,0.18), transparent 60%),
-    radial-gradient(720px circle at 86% 26%, rgba(155,107,255,0.16), transparent 60%),
-    radial-gradient(680px circle at 46% 88%, rgba(34,207,148,0.11), transparent 60%),
-    radial-gradient(500px circle at 70% 70%, rgba(255,143,51,0.08), transparent 60%);
+    radial-gradient(640px circle at 14% 18%, rgba(40,104,216,0.08), transparent 60%),
+    radial-gradient(720px circle at 86% 26%, rgba(104,70,184,0.07), transparent 60%),
+    radial-gradient(680px circle at 46% 88%, rgba(7,132,95,0.06), transparent 60%),
+    radial-gradient(500px circle at 70% 70%, rgba(173,76,11,0.05), transparent 60%);
   filter:blur(6px);
   animation:auroraShift 24s ease-in-out infinite alternate;
 }
@@ -464,14 +491,14 @@ body::before{
 #cursor-glow{
   position:fixed;top:0;left:0;width:300px;height:300px;margin:-150px 0 0 -150px;
   border-radius:50%;pointer-events:none;z-index:50;will-change:transform;
-  background:radial-gradient(circle, rgba(127,176,255,0.16), rgba(155,107,255,0.09) 42%, transparent 72%);
+  background:radial-gradient(circle, rgba(63,117,209,0.12), rgba(104,70,184,0.07) 42%, transparent 72%);
   mix-blend-mode:screen;
 }
 @media (hover:none){ #cursor-glow{display:none;} }
 
 /* typographic hierarchy — display font + bigger contrast between levels */
-.brand-name{font-family:var(--font-display);font-size:19px;font-weight:800;background:linear-gradient(120deg,#fff,var(--blue) 55%,var(--lavender));-webkit-background-clip:text;background-clip:text;color:transparent;}
-.topbar h1{font-family:var(--font-display);font-size:29px;font-weight:800;background:linear-gradient(120deg,#fff,var(--blue) 60%,var(--lavender));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-0.015em;}
+.brand-name{font-family:var(--font-display);font-size:19px;font-weight:800;background:linear-gradient(120deg,var(--text),var(--blue) 55%,var(--lavender));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.topbar h1{font-family:var(--font-display);font-size:29px;font-weight:800;background:linear-gradient(120deg,var(--text),var(--blue) 60%,var(--lavender));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-0.015em;}
 .section-title{font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--text);}
 .stat-value{font-size:33px;font-weight:800;}
 .campaign-name{font-size:16px;font-family:var(--font-display);font-weight:700;}
@@ -696,7 +723,7 @@ tbody tr.clickable:hover .subject-cell{color:var(--blue);}
 }
 
 /* ---------------- CHART TOOLTIP ---------------- */
-#chart-tooltip{position:fixed;top:0;left:0;z-index:400;pointer-events:none;background:rgba(18,23,40,0.94);border:1px solid var(--border-strong);border-radius:10px;box-shadow:0 4px 22px rgba(0,0,0,0.5),0 0 0 1px rgba(76,141,255,0.06);padding:9px 12px;font-size:11.5px;line-height:1.5;color:var(--text);opacity:0;visibility:hidden;transform:translate3d(-9999px,-9999px,0);transition:opacity .12s ease;max-width:220px;}
+#chart-tooltip{position:fixed;top:0;left:0;z-index:400;pointer-events:none;background:rgba(255,255,255,0.96);border:1px solid var(--border-strong);border-radius:10px;box-shadow:0 4px 22px rgba(24,37,43,0.16),0 0 0 1px rgba(40,104,216,0.06);padding:9px 12px;font-size:11.5px;line-height:1.5;color:var(--text);opacity:0;visibility:hidden;transform:translate3d(-9999px,-9999px,0);transition:opacity .12s ease;max-width:220px;}
 #chart-tooltip.show{opacity:1;visibility:visible;}
 #chart-tooltip .tt-title{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.03em;color:var(--text-tertiary);margin-bottom:6px;text-transform:uppercase;}
 #chart-tooltip .tt-row{display:flex;align-items:center;gap:7px;white-space:nowrap;}
@@ -878,6 +905,89 @@ const I18N = {
   plansTitle:{en:'MailScope Plans', hi:'मेलस्कोप योजनाएं'},
   plansDesc:{en:'From individual protection to organizational threat intelligence.', hi:'व्यक्तिगत सुरक्षा से लेकर संगठनात्मक खतरा इंटेलिजेंस तक।'},
   currentPlanLabel:{en:'Current Plan', hi:'वर्तमान योजना'},
+  planFreeTag:{en:'For individual investigation', hi:'व्यक्तिगत जांच के लिए'},
+  planSentinelTag:{en:'For advanced personal investigation', hi:'उन्नत व्यक्तिगत जांच के लिए'},
+  planEnterpriseTag:{en:'For organizational threat intelligence', hi:'संगठनात्मक खतरा इंटेलिजेंस के लिए'},
+  planPremium:{en:'Premium', hi:'प्रीमियम'},
+  planContact:{en:'Contact for Enterprise', hi:'एंटरप्राइज के लिए संपर्क करें'},
+  planFreeSummary:{en:'Investigate one email', hi:'एक ईमेल की जांच करें'},
+  planSentinelSummary:{en:'Understand email history + related activity', hi:'ईमेल इतिहास और संबंधित गतिविधि समझें'},
+  planEnterpriseSummary:{en:'Understand organizational threat activity', hi:'संगठनात्मक खतरा गतिविधि समझें'},
+  sentinelTitle:{en:'MailScope Sentinel', hi:'मेलस्कोप सेंटिनल'},
+  sentinelSubtitle:{en:'Advanced personal investigation and threat intelligence.', hi:'उन्नत व्यक्तिगत जांच और खतरा इंटेलिजेंस।'},
+  sentinelShortSubtitle:{en:'Advanced personal investigation', hi:'उन्नत व्यक्तिगत जांच'},
+  enterpriseTitle:{en:'Enterprise Intelligence', hi:'एंटरप्राइज इंटेलिजेंस'},
+  enterpriseSubtitle:{en:'Understand threat activity across an organization.', hi:'संगठन में खतरा गतिविधि को समझें।'},
+  premiumBadge:{en:'PREMIUM', hi:'प्रीमियम'},
+  enterpriseBadge:{en:'ENTERPRISE', hi:'एंटरप्राइज'},
+  currentPlanFree:{en:'Current plan: FREE', hi:'वर्तमान योजना: FREE'},
+  sentinelUnlock:{en:'Unlock the investigation layer beyond a single email.', hi:'एकल ईमेल से आगे की जांच परत खोलें।'},
+  enterpriseUnlock:{en:'Move from investigating individual emails to understanding threat activity across an organization.', hi:'व्यक्तिगत ईमेल की जांच से आगे बढ़कर पूरे संगठन में खतरा गतिविधि को समझें।'},
+  backToPlans:{en:'Back to Plans', hi:'योजनाओं पर वापस जाएं'},
+  exploreSentinel:{en:'Explore Sentinel', hi:'सेंटिनल देखें'},
+  sentinelFeatures:{en:'Sentinel capabilities', hi:'सेंटिनल क्षमताएं'},
+  howSentinelWorks:{en:'How it works', hi:'यह कैसे काम करता है'},
+  investigateStep:{en:'Investigate', hi:'जांच करें'},
+  correlateStep:{en:'Correlate', hi:'सहसंबंधित करें'},
+  understandActivityStep:{en:'Understand related activity', hi:'संबंधित गतिविधि समझें'},
+  deeperContextStep:{en:'Build deeper forensic context', hi:'गहरा फोरेंसिक संदर्भ बनाएं'},
+  haveSeenBeforeDesc:{en:'Correlate the current email with previously investigated cases and shared indicators.', hi:'वर्तमान ईमेल को पहले जांचे गए मामलों और साझा संकेतकों से सहसंबंधित करें।'},
+  advancedReportsDesc:{en:'Expand investigation and reporting beyond the basic investigation workflow.', hi:'बुनियादी जांच प्रक्रिया से आगे जांच और रिपोर्टिंग का विस्तार करें।'},
+  savedHistoryDesc:{en:'Intended to preserve investigation history for repeated analysis in future Sentinel functionality.', hi:'भविष्य की सेंटिनल सुविधा में बार-बार विश्लेषण के लिए जांच इतिहास सुरक्षित रखने का उद्देश्य।'},
+  relatedActivityDesc:{en:'Connect recurring domains, URLs, attachment hashes and other meaningful indicators across investigations.', hi:'जांच के बीच बार-बार आने वाले डोमेन, URL, अटैचमेंट हैश और अन्य महत्वपूर्ण संकेतकों को जोड़ें।'},
+  advancedReports:{en:'Advanced Forensic Reports', hi:'उन्नत फोरेंसिक रिपोर्ट'},
+  savedHistory:{en:'Saved Investigation History', hi:'सहेजा गया जांच इतिहास'},
+  relatedActivity:{en:'Related Activity Intelligence', hi:'संबंधित गतिविधि इंटेलिजेंस'},
+  prototypeStatus:{en:'Prototype', hi:'प्रोटोटाइप'},
+  plannedStatus:{en:'Planned', hi:'नियोजित'},
+  sentinelPreviewTitle:{en:'Sentinel Preview', hi:'सेंटिनल प्रीव्यू'},
+  sentinelPreviewText:{en:'Sentinel features are demonstrated in this prototype. Real billing and account-based entitlements are not connected yet.', hi:'इस प्रोटोटाइप में सेंटिनल सुविधाओं का प्रदर्शन किया गया है। वास्तविक बिलिंग और खाता-आधारित अधिकार अभी जुड़े नहीं हैं।'},
+  tryRelatedDemo:{en:'Try Related Activity Demo', hi:'संबंधित गतिविधि डेमो आजमाएं'},
+  continueExploring:{en:'Continue Exploring', hi:'एक्सप्लोर करना जारी रखें'},
+  enterpriseCapabilities:{en:'Enterprise capabilities', hi:'एंटरप्राइज क्षमताएं'},
+  enterpriseWorkflow:{en:'Enterprise workflow', hi:'एंटरप्राइज प्रक्रिया'},
+  requestEnterpriseDemo:{en:'Request Enterprise Demo', hi:'एंटरप्राइज डेमो का अनुरोध करें'},
+  campaignGraphDesc:{en:'Connects related domains, URLs, IPs and attachments into a campaign view.', hi:'संबंधित डोमेन, URL, IP और अटैचमेंट को अभियान दृश्य में जोड़ता है।'},
+  orgEmailIntel:{en:'Organizational Email Intelligence', hi:'संगठनात्मक ईमेल इंटेलिजेंस'},
+  orgIntelDesc:{en:'A planned view for understanding email activity across organizational context.', hi:'संगठनात्मक संदर्भ में ईमेल गतिविधि समझने के लिए नियोजित दृश्य।'},
+  crossUserDesc:{en:'A planned capability for correlating cases across users while respecting access boundaries.', hi:'पहुंच सीमाओं का सम्मान करते हुए उपयोगकर्ताओं के बीच मामलों को सहसंबंधित करने की नियोजित क्षमता।'},
+  teamWorkflow:{en:'Security-team Investigation Workflows', hi:'सुरक्षा टीम जांच प्रक्रिया'},
+  teamWorkflowDesc:{en:'A planned workflow for security teams to review, assign and resolve investigations.', hi:'सुरक्षा टीमों द्वारा जांच की समीक्षा, असाइन और समाधान के लिए नियोजित प्रक्रिया।'},
+  caseManagementDesc:{en:'A planned system for centralized case ownership, notes and status tracking.', hi:'केंद्रीकृत केस स्वामित्व, नोट्स और स्थिति ट्रैकिंग के लिए नियोजित प्रणाली।'},
+  retentionDesc:{en:'Planned controls for organization-defined retention and privacy settings.', hi:'संगठन द्वारा परिभाषित रिटेंशन और गोपनीयता सेटिंग्स के लिए नियोजित नियंत्रण।'},
+  emailStep:{en:'Email', hi:'ईमेल'},
+  caseStep:{en:'Case', hi:'केस'},
+  indicatorsStep:{en:'Related indicators', hi:'संबंधित संकेतक'},
+  campaignStep:{en:'Campaign intelligence', hi:'अभियान इंटेलिजेंस'},
+  orgThreatStep:{en:'Organizational threat view', hi:'संगठनात्मक खतरा दृश्य'},
+  teamActionStep:{en:'Security team action', hi:'सुरक्षा टीम कार्रवाई'},
+  enterpriseDemoTitle:{en:'Enterprise Demo', hi:'एंटरप्राइज डेमो'},
+  enterpriseDemoText:{en:'Enterprise access is not connected to billing or account management in this prototype.', hi:'इस प्रोटोटाइप में एंटरप्राइज एक्सेस बिलिंग या खाता प्रबंधन से जुड़ा नहीं है।'},
+  currentCapabilities:{en:'Current prototype capabilities', hi:'वर्तमान प्रोटोटाइप क्षमताएं'},
+  plannedCapabilities:{en:'Planned enterprise capabilities', hi:'नियोजित एंटरप्राइज क्षमताएं'},
+  campaignIntelligenceLabel:{en:'Campaign intelligence', hi:'अभियान इंटेलिजेंस'},
+  crossCaseRelationships:{en:'Cross-user / Cross-case Correlation', hi:'क्रॉस-यूजर / क्रॉस-केस सहसंबंध'},
+  advancedReporting:{en:'Advanced forensic reporting', hi:'उन्नत फोरेंसिक रिपोर्टिंग'},
+  centralizedCases:{en:'Centralized Case Management', hi:'केंद्रीकृत केस प्रबंधन'},
+  crossUserIntelligence:{en:'Cross-user intelligence', hi:'क्रॉस-यूजर इंटेलिजेंस'},
+  configurableRetention:{en:'Configurable Retention & Privacy Controls', hi:'कॉन्फ़िगर करने योग्य रिटेंशन और गोपनीयता नियंत्रण'},
+  planBasicAnalysis:{en:'Email paste / EML upload analysis', hi:'ईमेल पेस्ट / EML अपलोड विश्लेषण'},
+  planTraceOrigin:{en:'Trace Origin — infrastructure map', hi:'उद्गम ट्रेस — इन्फ्रास्ट्रक्चर मानचित्र'},
+  planTimeline:{en:'Investigation Timeline', hi:'जांच समयरेखा'},
+  planEvidence:{en:'Header / URL / attachment evidence', hi:'हेडर / URL / अटैचमेंट साक्ष्य'},
+  planCrossCase:{en:'"Have I Seen This Before?" cross-case correlation', hi:'"क्या मैंने यह पहले देखा है?" क्रॉस-केस सहसंबंध'},
+  planAdvancedReports:{en:'Advanced forensic reports', hi:'उन्नत फोरेंसिक रिपोर्ट'},
+  planSavedHistory:{en:'Saved investigation history', hi:'सहेजा गया जांच इतिहास'},
+  planCampaignGraph:{en:'Campaign intelligence graph', hi:'अभियान इंटेलिजेंस ग्राफ'},
+  planOrgIntel:{en:'Organizational email intelligence', hi:'संगठनात्मक ईमेल इंटेलिजेंस'},
+  planCrossUser:{en:'Cross-user / cross-case correlation', hi:'क्रॉस-यूजर / क्रॉस-केस सहसंबंध'},
+  planWorkflows:{en:'Security-team investigation workflows', hi:'सुरक्षा टीम जांच प्रक्रिया'},
+  planCentralCases:{en:'Centralized case management', hi:'केंद्रीकृत केस प्रबंधन'},
+  planRetention:{en:'Configurable retention / privacy controls', hi:'कॉन्फ़िगर करने योग्य रिटेंशन / गोपनीयता नियंत्रण'},
+  planRoadmapText:{en:'Enterprise concepts shown below are part of the MailScope roadmap — clearly distinct from what this prototype already runs (Free/Sentinel capabilities above are live in this build).', hi:'नीचे दिखाई गई एंटरप्राइज अवधारणाएं MailScope रोडमैप का हिस्सा हैं — यह इस प्रोटोटाइप में चल रही Free/Sentinel क्षमताओं से स्पष्ट रूप से अलग हैं।'},
+  noBillingShort:{en:'No real payment, billing, or user accounts exist in this prototype.', hi:'इस प्रोटोटाइप में कोई वास्तविक भुगतान, बिलिंग या उपयोगकर्ता खाते मौजूद नहीं हैं।'},
+  prototypeConnectedText:{en:'Prototype capabilities are connected to the existing demo. Planned capabilities are conceptual roadmap items.', hi:'प्रोटोटाइप क्षमताएं मौजूदा डेमो से जुड़ी हैं। नियोजित क्षमताएं वैचारिक रोडमैप आइटम हैं।'},
+  explorePrototype:{en:'Explore Prototype', hi:'प्रोटोटाइप एक्सप्लोर करें'},
   navInbox:{en:'Inbox', hi:'इनबॉक्स'},
   inboxTitle:{en:'Inbox', hi:'इनबॉक्स'},
   inboxDesc:{en:'Hover or tap a message for an instant MailScope Security Snapshot.', hi:'तुरंत मेलस्कोप सुरक्षा स्नैपशॉट के लिए किसी संदेश पर होवर करें या टैप करें।'},
@@ -1480,10 +1590,12 @@ function renderFlowSteps(){
 }
 
 function render(){
-  document.querySelectorAll('.nav-item').forEach(b=>b.classList.toggle('active', b.dataset.nav===state.page));
+  const navPage = state.page==='sentinel'||state.page==='enterprise' ? 'plans' : state.page;
+  document.querySelectorAll('.nav-item').forEach(b=>b.classList.toggle('active', b.dataset.nav===navPage));
   renderFlowSteps();
   const root = document.getElementById('page-root');
-  root.innerHTML = ({inbox:renderInbox, overview:renderOverview, investigate:renderInvestigate, origin:renderOrigin, campaigns:renderCampaigns, report:renderReport, plans:renderPlans})[state.page]();
+  const pageRenderers = {inbox:renderInbox, overview:renderOverview, investigate:renderInvestigate, origin:renderOrigin, campaigns:renderCampaigns, report:renderReport, plans:renderPlans, sentinel:renderSentinel, enterprise:renderEnterprise};
+  root.innerHTML = pageRenderers[state.page]();
   afterRender();
   window.scrollTo({top:0});
 }
@@ -1540,19 +1652,19 @@ async function refreshPlanInfo(){
 }
 
 const PLAN_FEATURES = [
-  {key:'basic_analysis', label:'Email paste / EML upload analysis', tiers:['free','sentinel','enterprise']},
-  {key:'trace_origin', label:'Trace Origin — infrastructure map', tiers:['free','sentinel','enterprise']},
-  {key:'investigation_timeline', label:'Investigation Timeline', tiers:['free','sentinel','enterprise']},
-  {key:'basic_forensic_evidence', label:'Header / URL / attachment evidence', tiers:['free','sentinel','enterprise']},
-  {key:'cross_case_intelligence', label:'"Have I Seen This Before?" cross-case correlation', tiers:['sentinel','enterprise']},
-  {key:'advanced_forensic_reports', label:'Advanced forensic reports', tiers:['sentinel','enterprise']},
-  {key:'saved_investigation_history', label:'Saved investigation history', tiers:['sentinel','enterprise']},
-  {key:'campaign_intelligence', label:'Campaign intelligence graph', tiers:['enterprise']},
-  {key:'organizational_intelligence', label:'Organizational email intelligence', tiers:['enterprise']},
-  {key:'cross_user_correlation', label:'Cross-user / cross-case correlation', tiers:['enterprise']},
-  {key:'investigation_workflows', label:'Security-team investigation workflows', tiers:['enterprise']},
-  {key:'centralized_case_management', label:'Centralized case management', tiers:['enterprise']},
-  {key:'configurable_retention', label:'Configurable retention / privacy controls', tiers:['enterprise']},
+  {key:'basic_analysis', label:'planBasicAnalysis', tiers:['free','sentinel','enterprise']},
+  {key:'trace_origin', label:'planTraceOrigin', tiers:['free','sentinel','enterprise']},
+  {key:'investigation_timeline', label:'planTimeline', tiers:['free','sentinel','enterprise']},
+  {key:'basic_forensic_evidence', label:'planEvidence', tiers:['free','sentinel','enterprise']},
+  {key:'cross_case_intelligence', label:'planCrossCase', tiers:['sentinel','enterprise']},
+  {key:'advanced_forensic_reports', label:'planAdvancedReports', tiers:['sentinel','enterprise']},
+  {key:'saved_investigation_history', label:'planSavedHistory', tiers:['sentinel','enterprise']},
+  {key:'campaign_intelligence', label:'planCampaignGraph', tiers:['enterprise']},
+  {key:'organizational_intelligence', label:'planOrgIntel', tiers:['enterprise']},
+  {key:'cross_user_correlation', label:'planCrossUser', tiers:['enterprise']},
+  {key:'investigation_workflows', label:'planWorkflows', tiers:['enterprise']},
+  {key:'centralized_case_management', label:'planCentralCases', tiers:['enterprise']},
+  {key:'configurable_retention', label:'planRetention', tiers:['enterprise']},
 ];
 
 function planStatusTag(featureKey){
@@ -1563,13 +1675,14 @@ function planStatusTag(featureKey){
 }
 
 function renderPlans(){
-  const currentPlan = (LIVE_PLAN_INFO && LIVE_PLAN_INFO.current_plan) || 'free';
+  const currentPlan = 'free';
   const demoOn = LIVE_PLAN_INFO && LIVE_PLAN_INFO.demo_entitlement;
   const tierMeta = {
-    free:{name:'FREE', tag:'For individual investigation', badge:'b-low'},
-    sentinel:{name:'MAILSCOPE SENTINEL', tag:'For advanced personal investigation', badge:'b-high'},
-    enterprise:{name:'ENTERPRISE', tag:'For organizational threat intelligence', badge:'b-critical'},
+    free:{name:'FREE', tag:tr('planFreeTag'), badge:'b-low'},
+    sentinel:{name:'MAILSCOPE SENTINEL', tag:tr('planSentinelTag'), badge:'b-high'},
+    enterprise:{name:'ENTERPRISE', tag:tr('planEnterpriseTag'), badge:'b-critical'},
   };
+  const tierSummary = {free:tr('planFreeSummary'),sentinel:tr('planSentinelSummary'),enterprise:tr('planEnterpriseSummary')};
   return `
   <div class="topbar"><div><h1>${tr('plansTitle')}</h1><p>${tr('plansDesc')}</p></div></div>
 
@@ -1579,35 +1692,109 @@ function renderPlans(){
   </div>
 
   <div class="ai-summary-text" style="margin-bottom:16px;text-align:center;font-size:13px;">
-    <b>FREE</b> — Investigate one email &nbsp;${ic('chevron')}&nbsp; <b>SENTINEL</b> — Understand email history + related activity &nbsp;${ic('chevron')}&nbsp; <b>ENTERPRISE</b> — Understand organizational threat activity
+    <b>FREE</b> — ${tierSummary.free} &nbsp;${ic('chevron')}&nbsp; <b>SENTINEL</b> — ${tierSummary.sentinel} &nbsp;${ic('chevron')}&nbsp; <b>ENTERPRISE</b> — ${tierSummary.enterprise}
   </div>
 
   <div class="row-2col" style="grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px;">
-    ${['free','sentinel','enterprise'].map(tier=>`<div class="card" style="padding:20px;${tier===currentPlan?'border-color:var(--blue-deep);':''}">
+    ${['free','sentinel','enterprise'].map(tier=>`<div class="card ${tier==='free'?'':'plan-card-link'}" style="padding:20px;${tier===currentPlan?'border-color:var(--blue-deep);':''}" ${tier==='free'?'':'data-action="open-plan-details" data-plan="'+tier+'" tabindex="0" role="button" aria-label="'+tierMeta[tier].name+'"'}>
       <div class="badge ${tierMeta[tier].badge}" style="margin-bottom:8px;">${tierMeta[tier].name}</div>
       <div class="section-sub" style="margin-bottom:14px;">${tierMeta[tier].tag}</div>
-      <div style="font-size:20px;font-weight:800;margin-bottom:14px;">${tier==='free'?'Free':tier==='sentinel'?'Premium':'Contact for Enterprise'}</div>
+      <div style="font-size:20px;font-weight:800;margin-bottom:14px;">${tier==='free'?'Free':tier==='sentinel'?tr('planPremium'):tr('planContact')}</div>
       <ul class="infer-list">
-        ${PLAN_FEATURES.filter(f=>f.tiers[0]===tier || (tier!=='free' && f.tiers.includes(tier) && f.tiers[0]===tier)).map(f=>`<li>${ic('check')}${f.label}${planStatusTag(f.key)}</li>`).join('')}
+        ${PLAN_FEATURES.filter(f=>f.tiers[0]===tier || (tier!=='free' && f.tiers.includes(tier) && f.tiers[0]===tier)).map(f=>`<li>${ic('check')}${tr(f.label)}${planStatusTag(f.key)}</li>`).join('')}
       </ul>
       ${tier===currentPlan?`<div class="badge b-low" style="margin-top:14px;">${tr('currentPlanLabel')}</div>`:''}
     </div>`).join('')}
   </div>
 
   <div class="card section-card">
-    <div class="section-title">Enterprise Intelligence</div>
-    <div class="ai-summary-text">"Move from investigating individual emails to understanding threat activity across an organization." Enterprise concepts shown below are part of the MailScope roadmap — clearly distinct from what this prototype already runs (Free/Sentinel capabilities above are live in this build).</div>
+    <div class="section-title">${tr('enterpriseTitle')}</div>
+    <div class="ai-summary-text">"${tr('enterpriseUnlock')}" ${tr('planRoadmapText')}</div>
     <div class="evidence-check">
-      <span class="evidence-chip">${ic('database')}Centralized cases (planned)</span>
-      <span class="evidence-chip">${ic('relay')}Cross-user correlation (planned)</span>
-      <span class="evidence-chip">${ic('activity')}Campaign intelligence (prototype)</span>
-      <span class="evidence-chip">${ic('cog')}Investigation workflows (planned)</span>
-      <span class="evidence-chip">${ic('file')}Advanced reporting (prototype)</span>
-      <span class="evidence-chip">${ic('shield')}Configurable retention (planned)</span>
+      <span class="evidence-chip">${ic('database')}${tr('centralizedCases')} (${tr('plannedStatus').toLowerCase()})</span>
+      <span class="evidence-chip">${ic('relay')}${tr('crossUserIntelligence')} (${tr('plannedStatus').toLowerCase()})</span>
+      <span class="evidence-chip">${ic('activity')}${tr('campaignIntelligenceLabel')} (${tr('prototypeStatus').toLowerCase()})</span>
+      <span class="evidence-chip">${ic('cog')}${tr('teamWorkflow')} (${tr('plannedStatus').toLowerCase()})</span>
+      <span class="evidence-chip">${ic('file')}${tr('advancedReporting')} (${tr('prototypeStatus').toLowerCase()})</span>
+      <span class="evidence-chip">${ic('shield')}${tr('configurableRetention')} (${tr('plannedStatus').toLowerCase()})</span>
     </div>
   </div>
-  <div class="disclaimer" style="margin-top:16px;">${ic('alert')}No real payment, billing, or user accounts exist in this prototype. Plan/feature gating is demonstrated architecturally so real billing and authentication can be added later without redesigning the analysis pipeline.</div>
+  <div class="disclaimer" style="margin-top:16px;">${ic('alert')}${tr('noBillingShort')} Plan/feature gating is demonstrated architecturally so real billing and authentication can be added later without redesigning the analysis pipeline.</div>
   `;
+}
+
+function openPlanDetails(plan){
+  if(plan!=='sentinel' && plan!=='enterprise') return;
+  state.page = plan;
+  state.campaignId = null;
+  render();
+}
+
+function planFeatureCard(icon, titleKey, descKey, statusKey, plan){
+  const status = statusKey ? `<span class="badge ${statusKey==='prototypeStatus'?'b-low':'b-neutral'}">${tr(statusKey)}</span>` : '';
+  return `<div class="card plan-feature-card" data-action="open-plan-details" data-plan="${plan}" tabindex="0" role="button">
+    <div class="plan-feature-icon">${ic(icon)}</div>
+    <h3>${tr(titleKey)}</h3>
+    <p>${tr(descKey)}</p>
+    ${status}
+  </div>`;
+}
+
+function planFlow(steps){
+  return `<div class="plan-flow">${steps.map(([labelKey,titleKey])=>`<div class="plan-flow-step">${tr(labelKey)}<strong>${tr(titleKey)}</strong></div>`).join('')}</div>`;
+}
+
+function renderSentinel(){
+  return `
+  <div class="topbar"><div><div class="crumb"><a data-action="back-to-plans">← ${tr('backToPlans')}</a></div><h1>${tr('sentinelTitle')}</h1><p>${tr('sentinelSubtitle')}</p></div></div>
+  <div class="card section-card plan-detail-hero">
+    <div><span class="badge b-high">${tr('premiumBadge')}</span><div class="section-sub" style="margin-top:10px;">${tr('currentPlanFree')}</div></div>
+    <div class="ai-summary-text" style="max-width:620px;font-size:14px;">${tr('sentinelUnlock')}</div>
+  </div>
+  <div class="section-head" style="margin-top:24px;"><div><div class="section-title">${tr('sentinelFeatures')}</div><div class="section-sub">${tr('sentinelSubtitle')}</div></div></div>
+  <div class="plan-feature-grid">
+    ${planFeatureCard('search','haveSeenBefore','haveSeenBeforeDesc',null,'sentinel')}
+    ${planFeatureCard('file','advancedReports','advancedReportsDesc',null,'sentinel')}
+    ${planFeatureCard('database','savedHistory','savedHistoryDesc',null,'sentinel')}
+    ${planFeatureCard('activity','relatedActivity','relatedActivityDesc',null,'sentinel')}
+  </div>
+  <div class="card section-card">
+    <div class="section-title">${tr('howSentinelWorks')}</div>
+    ${planFlow([['investigateStep','investigateStep'],['correlateStep','correlateStep'],['understandActivityStep','understandActivityStep'],['deeperContextStep','deeperContextStep']])}
+  </div>
+  <div class="plan-detail-actions">
+    <button class="btn-primary" data-action="open-sentinel-preview">${ic('search')}${tr('exploreSentinel')}</button>
+    <button class="btn-ghost" data-action="back-to-plans">← ${tr('backToPlans')}</button>
+  </div>
+  <div class="disclaimer" style="margin-top:16px;">${ic('alert')}${tr('noBillingShort')}</div>`;
+}
+
+function renderEnterprise(){
+  return `
+  <div class="topbar"><div><div class="crumb"><a data-action="back-to-plans">← ${tr('backToPlans')}</a></div><h1>${tr('enterpriseTitle')}</h1><p>${tr('enterpriseSubtitle')}</p></div></div>
+  <div class="card section-card plan-detail-hero">
+    <div><span class="badge b-critical">${tr('enterpriseBadge')}</span><div class="section-sub" style="margin-top:10px;">${tr('currentPlanFree')}</div></div>
+    <div class="ai-summary-text" style="max-width:720px;font-size:14px;">${tr('enterpriseUnlock')}</div>
+  </div>
+  <div class="section-head" style="margin-top:24px;"><div><div class="section-title">${tr('enterpriseCapabilities')}</div><div class="section-sub">${tr('enterpriseSubtitle')}</div></div></div>
+  <div class="plan-feature-grid">
+    ${planFeatureCard('activity','campaignIntelligenceLabel','campaignGraphDesc','prototypeStatus','enterprise')}
+    ${planFeatureCard('building','enterpriseTitle','orgIntelDesc','plannedStatus','enterprise')}
+    ${planFeatureCard('relay','crossCaseRelationships','crossUserDesc','plannedStatus','enterprise')}
+    ${planFeatureCard('user','teamWorkflow','teamWorkflowDesc','plannedStatus','enterprise')}
+    ${planFeatureCard('database','centralizedCases','caseManagementDesc','plannedStatus','enterprise')}
+    ${planFeatureCard('shield','configurableRetention','retentionDesc','plannedStatus','enterprise')}
+  </div>
+  <div class="card section-card">
+    <div class="section-title">${tr('enterpriseWorkflow')}</div>
+    ${planFlow([['emailStep','emailStep'],['caseStep','caseStep'],['indicatorsStep','indicatorsStep'],['campaignStep','campaignStep'],['orgThreatStep','orgThreatStep'],['teamActionStep','teamActionStep']])}
+    <div class="section-sub" style="margin-top:14px;">${tr('prototypeConnectedText')}</div>
+  </div>
+  <div class="plan-detail-actions">
+    <button class="btn-primary" data-action="open-enterprise-demo">${ic('building')}${tr('requestEnterpriseDemo')}</button>
+    <button class="btn-ghost" data-action="back-to-plans">← ${tr('backToPlans')}</button>
+  </div>
+  <div class="disclaimer" style="margin-top:16px;">${ic('alert')}${tr('noBillingShort')}</div>`;
 }
 
 function renderOverview(){
@@ -2039,7 +2226,7 @@ function drawInvestigationMap(e){
       <circle cx="${node.x}" cy="${node.y}" r="15" fill="${node.accent}" opacity="0.16" class="map-pin-pulse"/>
       <circle cx="${node.x}" cy="${node.y}" r="7" fill="${node.accent}" opacity="0.35"/>
       <circle cx="${node.x}" cy="${node.y}" r="5" fill="${node.accent}"/>
-      <rect x="${bx}" y="${by}" width="${boxW}" height="${boxH}" rx="8" fill="rgba(10,14,26,0.88)" stroke="${node.accent}" stroke-width="1" opacity="0.95"/>
+      <rect x="${bx}" y="${by}" width="${boxW}" height="${boxH}" rx="8" fill="rgba(255,255,255,0.94)" stroke="${node.accent}" stroke-width="1" opacity="0.95"/>
       <text x="${bx+12}" y="${by+17}" font-size="11.5" font-weight="700" fill="#eef1f9" font-family="Inter, sans-serif">${node.label}</text>
       <text x="${bx+12}" y="${by+31}" font-size="10" fill="#93a0c2" font-family="'JetBrains Mono', monospace">${(node.sub||'').slice(0,26)}</text>
     </g>`;
@@ -2642,7 +2829,7 @@ function initOverviewCharts(){
    Nothing here silently presents demo data as a real analysis result.
 ========================================================= */
 const MAILSCOPE = {
-  backendBase: window.MAILSCOPE_API_BASE || 'http://127.0.0.1:8000',
+  backendBase: window.MAILSCOPE_API_BASE || 'http://mailscope-api.onrender.com',
   backendStatus: 'unknown',   // 'unknown' | 'online' | 'offline'
   liveMode: true,
 };
@@ -3095,6 +3282,28 @@ document.addEventListener('click', function(e){
   if(!t){ if(e.target.id==='drawer-overlay') closeDrawer(); return; }
   const action = t.dataset.action;
 
+  if(action==='open-plan-details'){ openPlanDetails(t.dataset.plan); return; }
+  if(action==='back-to-plans'){ closeDrawer(); state.page='plans'; state.campaignId=null; plansFetchState='idle'; render(); return; }
+  if(action==='open-sentinel-preview'){
+    openDrawer(`<div class="drawer-head"><div class="drawer-tag">${tr('premiumBadge')}</div><button class="drawer-close" data-action="close-drawer">×</button></div>
+      <div class="section-title">${tr('sentinelPreviewTitle')}</div>
+      <div class="section-sub" style="margin-top:8px;line-height:1.6;">${tr('sentinelPreviewText')}</div>
+      <div class="plan-detail-actions"><button class="btn-primary" data-action="goto-campaigns">${ic('activity')}${tr('tryRelatedDemo')}</button><button class="btn-ghost" data-action="back-to-plans">${tr('backToPlans')}</button><button class="btn-ghost" data-action="close-drawer">${tr('continueExploring')}</button></div>`);
+    return;
+  }
+  if(action==='open-enterprise-demo'){
+    openDrawer(`<div class="drawer-head"><div class="drawer-tag">${tr('enterpriseBadge')}</div><button class="drawer-close" data-action="close-drawer">×</button></div>
+      <div class="section-title">${tr('enterpriseDemoTitle')}</div>
+      <div class="section-sub" style="margin-top:8px;line-height:1.6;">${tr('enterpriseDemoText')}</div>
+      <div class="section-sub" style="margin-top:16px;font-weight:700;color:var(--text);">${tr('currentCapabilities')}</div>
+      <div class="evidence-check"><span class="evidence-chip">${ic('activity')}${tr('campaignIntelligenceLabel')}</span><span class="evidence-chip">${ic('relay')}${tr('crossCaseRelationships')}</span><span class="evidence-chip">${ic('file')}${tr('advancedReporting')}</span></div>
+      <div class="section-sub" style="margin-top:16px;font-weight:700;color:var(--text);">${tr('plannedCapabilities')}</div>
+      <div class="evidence-check"><span class="evidence-chip">${ic('database')}${tr('centralizedCases')}</span><span class="evidence-chip">${ic('user')}${tr('crossUserIntelligence')}</span><span class="evidence-chip">${ic('shield')}${tr('configurableRetention')}</span></div>
+      <div class="plan-detail-actions"><button class="btn-primary" data-action="goto-campaigns">${ic('activity')}${tr('explorePrototype')}</button><button class="btn-ghost" data-action="back-to-plans">${tr('backToPlans')}</button></div>`);
+    return;
+  }
+  if(action==='goto-campaigns'){ closeDrawer(); state.page='campaigns'; state.campaignId=null; liveCampaignsFetchState='idle'; render(); return; }
+
   if(action==='goto-analyze-hero'){ state.page='investigate'; render(); setTimeout(()=>runPipeline('EM-1002'),50); return; }
   if(action==='goto-origin'){ state.page='origin'; render(); return; }
   if(action==='goto-report'){ state.page='report'; render(); setTimeout(()=>{ document.getElementById('report-generate-btn').click(); },60); return; }
@@ -3220,6 +3429,12 @@ document.addEventListener('click', function(e){
     document.getElementById('sound-toggle').style.opacity = next ? '1' : '0.55';
     if(next){ sound.ensureCtx(); }
     return;
+  }
+});
+document.addEventListener('keydown', function(e){
+  if((e.key==='Enter'||e.key===' ') && e.target.closest('[data-action="open-plan-details"]')){
+    e.preventDefault();
+    openPlanDetails(e.target.closest('[data-action="open-plan-details"]').dataset.plan);
   }
 });
 document.addEventListener('change', function(e){
