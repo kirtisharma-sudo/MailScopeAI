@@ -1,0 +1,21 @@
+From: HR Verification Desk <no-reply@hr-verify-portal.com>
+Reply-To: verify-hr@secure-offer-desk.com
+To: student@example.edu
+Subject: Action Required: Complete Your Candidate Document Verification
+Date: Tue, 9 Sep 2026 11:02:41 +0530
+Message-ID: <verify-4417@hr-verify-portal.com>
+Received: from relay.hr-verify-portal.com ([203.0.113.45]) by mx.example.edu with ESMTP; Tue, 9 Sep 2026 11:02:44 +0530
+Authentication-Results: mx.example.edu; spf=fail smtp.mailfrom=hr-verify-portal.com; dkim=fail; dmarc=fail
+Content-Type: text/plain; charset="utf-8"
+
+Hello,
+
+Your onboarding file is INCOMPLETE. To avoid losing your allotted
+position, upload your Aadhaar, PAN and bank passbook scan within
+12 hours using the secure verification link below.
+
+http://hr-verify-portal.com/upload-documents?ref=4417
+
+Failure to verify will result in immediate withdrawal of your offer.
+
+HR Verification Desk
