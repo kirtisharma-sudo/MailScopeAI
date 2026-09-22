@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "MailScope AI — Security Snapshot",
+  "version": "0.1.0",
+  "description": "In-inbox forensic triage for Gmail, powered by the existing MailScope AI analysis backend. An interface layer only — all detection logic lives in the MailScope backend.",
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "MailScope AI"
+  },
+
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["shared/config.js", "shared/fingerprint.js", "shared/cache.js", "content/gmail-adapter.js", "content/snapshot.js", "content/quick-preview.js", "content/content.js"],
+      "css": ["content/styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+
+  "host_permissions": [
+    "https://mailscope-api.onrender.com/*",
+    "http://localhost:8000/*",
+    "http://127.0.0.1:8000/*"
+  ],
+
+  "_permission_notes": {
+    "storage": "chrome.storage.local caches fingerprint -> analysis results locally, so re-opening an already-scanned email never re-calls the backend. No raw email content is stored, only the analysis result and a hash.",
+    "activeTab": "Grants temporary access to the active tab ONLY when the user opens the popup — used solely to check whether the active tab is Gmail and to relay a 'what's the current email's status' query to the content script. No background tab access, no browsing history.",
+    "host_permissions": "Limited to the MailScope backend origin(s) only, and only used by the background service worker to call the EXISTING /api/analyze and /api/reports endpoints. This also lets the background worker perform that fetch without being subject to Gmail's page-level CORS restrictions — no backend CORS changes were required. Production backend (https://mailscope-api.onrender.com) is listed first; the two localhost entries are retained ONLY for local development and are unused in the judge demo. No <all_urls>, no Gmail OAuth scopes.",
+    "explicitly_not_requested": "cookies, history, webRequest, the broad 'tabs' permission, scripting, downloads, notifications, gmail.readonly OAuth scopes — none of these are used. The extension reads only what is already visible in the currently open Gmail message DOM."
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
